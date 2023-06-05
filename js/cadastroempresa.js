@@ -1,7 +1,9 @@
 const form = document.getElementById("form");
 export function handleSubmit(event) {
     event.preventDefault();
-    checkForm()
+    checkForm() 
+    
+    
   }
   
   document.addEventListener("DOMContentLoaded", function() {
@@ -138,4 +140,8 @@ function errorInput(input, message){
 
 }
 
+
+
 window.checkForm= checkForm
+
+

@@ -32,7 +32,21 @@ function checkInputQuantidadeMaterial(){
       return true
     }
   
+}
+
+function checkInputEntregaMaterial(){
+  const entregaMaterial = document.getElementById("local__material__entregue");
+  const entregaMaterialValue = entregaMaterial.value;
+
+  if(entregaMaterialValue == ""){
+    errorInput(entregaMaterial, "Informe o local de entrega")
+  }else{
+    const formItem = entregaMaterial.parentElement;
+    formItem.className = "form-entrega-material"
+    return true
   }
+
+}
 
 
 function checkInputSelectTipoMaterial(){
@@ -48,6 +62,7 @@ function checkInputSelectTipoMaterial(){
 function checkFormValidarInsercaoMaterial(){
   if(checkInputNomeContribuente() &&
   checkInputQuantidadeMaterial() &&
+  checkInputEntregaMaterial() &&
   checkInputSelectTipoMaterial()){
     alert('Inserção de material feita com sucesso!')
   }
